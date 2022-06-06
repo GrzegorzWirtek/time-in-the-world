@@ -1,0 +1,22 @@
+@mixin button-style {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    outline: none;
+    padding: 10px 24px;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+$checkbox-width: 30px;
+$checkbox-color: grey;
+$submit-button-bcg-color: rgb(68, 68, 130);
+$choose-button-bcg-color: rgb(174, 15, 15);
+$chosen-color: rgb(123, 123, 123);
+$info-bcg-color: rgb(253, 253, 147);
+$main-items-margin-bottom: 5px;
+$chosen-bcg-color: white;
+$checked-bcg-color: rgb(20, 207, 20);

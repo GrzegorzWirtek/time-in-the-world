@@ -1,0 +1,22 @@
+@import '../../sass/variables.scss';
+
+.city{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+
+    &__name{
+        text-align: right;
+        font-weight: 400;
+        margin-bottom: $main-items-margin-bottom;
+    }
+
+
+    &__time{
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin-bottom: $main-items-margin-bottom;
+    }
+}

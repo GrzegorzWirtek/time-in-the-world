@@ -1,0 +1,11 @@
+@import '../../sass/variables.scss';
+
+.main{
+
+    margin-bottom: 100px;
+
+    &__button{
+        @include button-style();
+        background-color: $choose-button-bcg-color;
+    }
+}
