@@ -1,0 +1,15 @@
+@import '../../sass/variables.scss';
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $header-height;
+  width: 60%;
+  margin: 0 auto;
+  border-bottom: 1px solid $chosen-color;
+
+  &__title{
+    font-size: 1.4rem;
+  }
+}

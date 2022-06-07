@@ -1,8 +1,12 @@
 @import '../../sass/variables.scss';
 
 .main{
+    margin: $main-margin-top auto 100px auto;
 
-    margin-bottom: 100px;
+    &__no-cities{
+        text-align: center;
+        color: $chosen-color;
+    }
 
     &__button{
         @include button-style();

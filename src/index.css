@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
+html {
   font-family: 'Mukta', sans-serif;
   font-size: 20px;
 }
 
-h1, h2, p, input, button, label{
+h1,
+h2,
+p,
+input,
+button,
+label {
   font-size: 1rem;
   font-weight: 400;
 }

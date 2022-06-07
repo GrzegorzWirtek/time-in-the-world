@@ -1,0 +1,19 @@
+@import '../../sass/variables.scss';
+
+.welcome{
+
+  &__title{
+    margin-top: $main-margin-top;
+    text-align: center;
+    color: $chosen-color;
+  }
+
+  &__button{
+    @include button-style();
+    background-color: $submit-button-bcg-color;
+    top: 50%;
+    bottom: calc(50%);
+    transform: translateY(-50%);
+    height: 46px;
+  }
+}

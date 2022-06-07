@@ -9,14 +9,27 @@
     color: white;
     font-size: 1.1rem;
     cursor: pointer;
+    z-index: 2;
+
+    @media(min-width: 400px){
+        right: auto;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%);;
+        width: 340px;
+    }
 }
 
+$min-width: 600px;
+
+$header-height: 80px;
+$main-margin-top: 18px;
 $checkbox-width: 30px;
 $checkbox-color: grey;
 $submit-button-bcg-color: rgb(68, 68, 130);
-$choose-button-bcg-color: rgb(174, 15, 15);
+$choose-button-bcg-color: rgb(123, 123, 123);
 $chosen-color: rgb(123, 123, 123);
-$info-bcg-color: rgb(253, 253, 147);
-$main-items-margin-bottom: 5px;
+$info-bcg-color: #e0ffa6;
+$main-items-margin-bottom: 8px;
 $chosen-bcg-color: white;
-$checked-bcg-color: rgb(20, 207, 20);
+$checked-bcg-color: #f3bc3c;
