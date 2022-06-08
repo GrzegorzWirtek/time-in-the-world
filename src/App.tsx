@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import { useState } from 'react';
 import Main from './components/Main/Main';
 import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	const [state, setState] = useLocalStorage<useLocaleStorageType>(
@@ -30,6 +31,7 @@ function App() {
 		<div className='App'>
 			<Header />
 			{content}
+			<Footer />
 		</div>
 	);
 }

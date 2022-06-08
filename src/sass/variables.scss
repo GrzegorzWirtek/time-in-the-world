@@ -1,6 +1,6 @@
 @mixin button-style {
     position: fixed;
-    bottom: 20px;
+    bottom: 60px;
     right: 20px;
     left: 20px;
     outline: none;
@@ -14,22 +14,31 @@
     @media(min-width: 400px){
         right: auto;
         left: 50%;
-        bottom: 50px;
         transform: translateX(-50%);;
         width: 340px;
     }
 }
 
+@mixin footer-font{
+    font-size: 0.8rem;
+}
+
 $min-width: 600px;
 
-$header-height: 80px;
-$main-margin-top: 18px;
+$header-height: 82px;
+$header-bcg-color: linear-gradient(90deg, rgba(137,110,129,1) 0%, rgba(125,106,136,1) 35%, rgba(103,97,161,1) 100%);
+$main-margin-top: 120px;
 $checkbox-width: 30px;
 $checkbox-color: grey;
 $submit-button-bcg-color: rgb(68, 68, 130);
-$choose-button-bcg-color: rgb(123, 123, 123);
+$choose-button-bcg-color: #896e81;
 $chosen-color: rgb(123, 123, 123);
 $info-bcg-color: #e0ffa6;
 $main-items-margin-bottom: 8px;
-$chosen-bcg-color: white;
-$checked-bcg-color: #f3bc3c;
+$chosen-bcg-color: #ffffff;
+$checked-bcg-color: #f0d698;
+$nav-width: 36px;
+$nav-heigth: 21px;
+$ham-color: rgba(255, 255, 255, 0.601);
+$city-bcg-color: linear-gradient(90deg, rgba(221,224,232,1) 0%, rgba(205,215,253,1) 100%);
+$footer-color: #a1a1a7;

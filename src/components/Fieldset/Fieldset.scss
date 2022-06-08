@@ -7,7 +7,7 @@
     border: none;
 
     &__title{
-        margin: $main-margin-top auto;
+        margin: $main-margin-top auto 40px auto;
         text-align: center;
         color: $chosen-color;
     }
@@ -60,7 +60,7 @@
         bottom: 0;
         right: 0;
         left: 0;
-        height: 96px;
+        height: 116px;
         background-color: white;
         z-index: 1
     }
@@ -72,19 +72,19 @@
 
     &__chosen{
         position: fixed;
-        bottom: 66px;
+        bottom: 106px;
         right: 0;
         left: 0;
         display: flex;
         flex-wrap: wrap;
-        padding: 12px 22px;
+        min-width: 320px;
+        padding: 14px 22px 10px 22px;
         background-color: $chosen-bcg-color;
         z-index: 3;
 
         @media(min-width: 400px){
             display: flex;
             justify-content: center;
-            bottom: 96px;
          }
 
         &-li{

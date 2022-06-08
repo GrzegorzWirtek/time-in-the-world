@@ -4,29 +4,31 @@
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
-    max-width: 290px;
-    margin: 0 auto;
+    max-width: 330px;
+    margin: 5px auto;
+    padding: 0 14px;
+    background: $city-bcg-color;
+    border-radius: 5px;
 
     &__name{
         text-align: left;
         font-size: 1.2rem;
         font-weight: 400;
-        margin-bottom: $main-items-margin-bottom;
     }
-
 
     &__time{
         text-align: left;
         font-weight: 600;
-        font-size: 1.5rem;
-        margin-bottom: $main-items-margin-bottom;
-        text-align: right;
-        // background-color: blue;
+        font-size: 1.7rem;
+        text-align: right;  
     }
 
     &__day{
+        display: inline-block;
         color: $chosen-color;
         font-size: 1rem;
         font-weight: 400;
+        width: 46px;
+        text-align: left;
     }
 }

@@ -1,15 +1,32 @@
 @import '../../sass/variables.scss';
 
 .header{
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: $header-height;
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
-  border-bottom: 1px solid $chosen-color;
+  background: $header-bcg-color;
+  color: white;
+
+  &__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   &__title{
-    font-size: 1.4rem;
+    flex-basis: 100%;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  &__logo{
+    width: 35px;
+    height: 35px;
   }
 }

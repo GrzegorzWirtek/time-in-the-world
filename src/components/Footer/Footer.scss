@@ -1,0 +1,31 @@
+@import '../../sass/variables.scss';
+
+.footer{
+  position: fixed;
+  bottom: 17px;
+  left: 0;
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+
+  &__name{
+    font-size: 0.8rem;
+    color: $footer-color;
+  }
+
+  &__icons{
+    display: flex;
+    align-items: center;
+    transform: translateY(1px);
+  }
+
+  &__icon{
+    width: 16px;
+    margin: 0 6px;
+    filter: invert(77%) sepia(6%) saturate(186%) hue-rotate(201deg) brightness(83%) contrast(88%);
+    line-height: 1;
+  }
+}
