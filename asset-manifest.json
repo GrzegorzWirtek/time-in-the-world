@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/time-in-the-world/static/css/main.39d17fc2.css",
-    "main.js": "/time-in-the-world/static/js/main.5846377e.js",
+    "main.js": "/time-in-the-world/static/js/main.8713abac.js",
     "index.html": "/time-in-the-world/index.html",
     "static/media/check.svg": "/time-in-the-world/static/media/check.65b7782172ce27858b8c.svg",
     "main.39d17fc2.css.map": "/time-in-the-world/static/css/main.39d17fc2.css.map",
-    "main.5846377e.js.map": "/time-in-the-world/static/js/main.5846377e.js.map"
+    "main.8713abac.js.map": "/time-in-the-world/static/js/main.8713abac.js.map"
   },
   "entrypoints": [
     "static/css/main.39d17fc2.css",
-    "static/js/main.5846377e.js"
+    "static/js/main.8713abac.js"
   ]
 }
