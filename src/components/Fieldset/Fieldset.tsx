@@ -3,6 +3,7 @@ import CITIES from '../../assets/cities';
 import { useState } from 'react';
 import { useLocaleStorageType } from '../../hooks/useLocalStorage';
 import { useDate } from '../../hooks/useDate';
+import { specifyHourAndDayNumber } from '../../functions/specifyHourAndDayNumber';
 
 const TIMEOUT_DELAY = 1000;
 
@@ -53,18 +54,12 @@ const Fieldset: React.FC<propsType> = ({ state, setState, setMain }) => {
 	};
 
 	const cities = CITIES.map((item) => {
-		let cityHour = hour + item.shift;
-		if (hour + item.shift >= 24) {
-			cityHour = -(24 - (hour + item.shift));
-		} else if (hour + item.shift < 0) {
-			cityHour = hour + item.shift + 24;
-		}
-		let dayOfTheWeek = day(parseInt(dayNumber));
-		if (hour + item.shift >= 24) {
-			dayOfTheWeek = day(parseInt(dayNumber) + 1);
-		} else if (hour + item.shift < 0) {
-			dayOfTheWeek = day(parseInt(dayNumber) - 1);
-		}
+		const { cityHour, currentDayNumber } = specifyHourAndDayNumber(
+			item,
+			hour,
+			dayNumber,
+		);
+		const dayOfTheWeek = day(currentDayNumber);
 
 		return (
 			<div key={item.id} className='fieldset__wrapper'>

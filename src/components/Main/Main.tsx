@@ -2,6 +2,7 @@ import './Main.scss';
 import { useLocaleStorageType } from '../../hooks/useLocalStorage';
 import { useDate } from '../../hooks/useDate';
 import City from '../City/City';
+import { specifyHourAndDayNumber } from '../../functions/specifyHourAndDayNumber';
 
 interface propsType {
 	state: useLocaleStorageType | undefined;
@@ -10,19 +11,14 @@ interface propsType {
 
 const Main: React.FC<propsType> = ({ state, setMain }) => {
 	const { hour, minutes, day, dayNumber } = useDate();
+
 	const cities = state?.map((item) => {
-		let cityHour = hour + item.shift;
-		if (hour + item.shift >= 24) {
-			cityHour = -(24 - (hour + item.shift));
-		} else if (hour + item.shift < 0) {
-			cityHour = hour + item.shift + 24;
-		}
-		let dayOfTheWeek = day(parseInt(dayNumber));
-		if (hour + item.shift >= 24) {
-			dayOfTheWeek = day(parseInt(dayNumber) + 1);
-		} else if (hour + item.shift < 0) {
-			dayOfTheWeek = day(parseInt(dayNumber) - 1);
-		}
+		const { cityHour, currentDayNumber } = specifyHourAndDayNumber(
+			item,
+			hour,
+			dayNumber,
+		);
+		const dayOfTheWeek = day(currentDayNumber);
 
 		return (
 			<City
