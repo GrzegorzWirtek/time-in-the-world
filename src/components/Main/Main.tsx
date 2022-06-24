@@ -11,12 +11,19 @@ interface propsType {
 const Main: React.FC<propsType> = ({ state, setMain }) => {
 	const { hour, minutes, day, dayNumber } = useDate();
 	const cities = state?.map((item) => {
-		const cityHour =
-			hour + item.shift < 24 ? hour + item.shift : -(24 - (hour + item.shift));
-		const dayOfTheWeek =
-			hour + item.shift < 24
-				? day(parseInt(dayNumber))
-				: day(parseInt(dayNumber) + 1);
+		let cityHour = hour + item.shift;
+		if (hour + item.shift >= 24) {
+			cityHour = -(24 - (hour + item.shift));
+		} else if (hour + item.shift < 0) {
+			cityHour = hour + item.shift + 24;
+		}
+		let dayOfTheWeek = day(parseInt(dayNumber));
+		if (hour + item.shift >= 24) {
+			dayOfTheWeek = day(parseInt(dayNumber) + 1);
+		} else if (hour + item.shift < 0) {
+			dayOfTheWeek = day(parseInt(dayNumber) - 1);
+		}
+
 		return (
 			<City
 				key={item.id}
